@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Exo+2:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100&family=Oxygen+Mono&display=swap");
+
+$type-scale: 1.333;
+$font-size_base: 16;
+
+$sizes: "sm", "xs", "2xs";
+$size: $font-size_base;
+
+@each $name in $sizes {
+  $size: calc($size / $type-scale);
+  html {
+    --font-size_#{$name}: #{calcRem($size)};
+  }
+}
+
+$sizes: "lg", "xl", "2xl", "3xl";
+$size: $font-size_base;
+
+@each $name in $sizes {
+  $size: calc($size * $type-scale);
+  html {
+    --font-size_#{$name}: #{calcRem($size)};
+  }
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  font-size: #{$font-size_base}px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: var(--font-size_3xl);
+}
+
+h2 {
+  font-size: var(--font-size_2xl);
+}
+
+h3 {
+  font-size: var(--font-size_xl);
+}
+
+h4 {
+  font-size: var(--font-size_lg);
+}

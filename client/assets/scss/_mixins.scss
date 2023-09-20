@@ -1,0 +1,16 @@
+@function calcRem($value) {
+  $valueInRem: ($value / 16) + rem;
+  @return $valueInRem;
+}
+
+@mixin center-self {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
