@@ -1,6 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  app: {
+    baseURL: "/JiuJitsuSite/",
+    buildAssetsDir: "assets",
+  },
   css: ["sanitize.css/sanitize.css", "~/assets/scss/globals.scss"],
   vite: {
     css: {
