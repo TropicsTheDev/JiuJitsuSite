@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "gh-pages": "^6.0.0",
     "nuxt": "^3.7.3"
   },
   "dependencies": {
